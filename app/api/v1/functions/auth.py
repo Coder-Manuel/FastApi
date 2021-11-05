@@ -45,8 +45,6 @@ class JWTAuthorize(HTTPBearer):
     def __init__(self, auto_error: bool = True):
         super(JWTAuthorize, self).__init__(auto_error=auto_error)
 
-    print("Code Executed")
-
     async def __call__(self, request: Request):
         # try:
         credentials: HTTPAuthorizationCredentials = await super(JWTAuthorize, self).__call__(request)
