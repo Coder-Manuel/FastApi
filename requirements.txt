@@ -1,0 +1,5 @@
+fastapi==0.70.0
+pydantic==1.8.2
+python-decouple==3.5
+uvicorn==0.13.4
+PyJWT~=2.3.0
