@@ -36,9 +36,9 @@ async def http_exception_handle(request: Request, exc: HTTPException):
     switcher = {
         "Not authenticated": JSONResponse(content=ForbiddenResponse(detail="Authorization code missing").dict(), status_code=403),
         "Invalid authentication credentials": JSONResponse(
-            content=ForbiddenResponse(detail="Invalid authentication scheme").dict()),
+            content=ForbiddenResponse(detail="Invalid authentication scheme").dict(), status_code=403),
         "Invalid code": JSONResponse(
-            content=ForbiddenResponse(detail="Token is invalid or expired").dict()),
+            content=ForbiddenResponse(detail="Token is invalid or expired").dict(), status_code=403),
     }
     return switcher.get(exc.detail)
 
