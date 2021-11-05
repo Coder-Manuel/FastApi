@@ -7,6 +7,7 @@ from app.api.v1.api import router as api_router
 from app.api.v1.endpoints.models import ErrorResponse, ForbiddenResponse, UnauthorizedResponse, BadRequestResponse
 from app.config import AppConfig as config
 
+
 title = config.APP_NAME
 version = config.APP_VERSION
 path = config.APP_PATH
