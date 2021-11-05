@@ -13,6 +13,9 @@ version = config.APP_VERSION
 path = config.APP_PATH
 docs_url = config.DOCS_URL
 
+print(path)
+print(docs_url)
+
 app = FastAPI(title=title, version=version, docs_url=docs_url)
 
 responses = {500: {"model": ErrorResponse}, 401: {"model": UnauthorizedResponse}, 403: {"model": ForbiddenResponse},
